@@ -2,16 +2,16 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8" />
-    <title>SITE_ADI | Türk +18 NSFW Telegram Topluluğu</title>
-    <meta name="description" content="Türk +18 NSFW topluluğu. Yetişkinlere özel içerik ve anonim ortam için Telegram kanalımıza katılın. Güvenli, ücretsiz ve sadece yetişkinlere yönelik." />
+    <title> Türk +18 NSFW Telegram Topluluğu</title>
+    <meta name="description" content="SITE_ADI: Türk +18 NSFW Telegram topluluğu için yönlendirme sayfası. Yetişkinlere özel anonim ortam ve cinsel sağlık, biyoloji üzerine bilgilendirici makaleler." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Basit SEO -->
-    <meta name="keywords" content="Türk NSFW, +18 Telegram, yetişkin topluluk, NSFW kanal, Türk +18 grup" />
+    <meta name="keywords" content="Türk NSFW, +18 Telegram, cinsel sağlık, üreme sağlığı, biyoloji, yetişkin topluluk, NSFW kanal, Türk +18 grup" />
 
-    <!-- Open Graph (Google / WhatsApp / Telegram önizleme) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="SITE_ADI | Türk +18 NSFW Telegram Topluluğu" />
-    <meta property="og:description" content="+18 yetişkinlere özel Türk NSFW topluluğu. Anonim ve ücretsiz katılım." />
+    <meta property="og:description" content="+18 yetişkinlere özel Türk NSFW topluluğu ve cinsel sağlık, biyoloji üzerine bilgilendirici içerikler." />
     <meta property="og:type" content="website" />
 
     <style>
@@ -39,7 +39,7 @@
             color: var(--text-main);
             min-height: 100vh;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             padding: 24px;
         }
@@ -57,9 +57,13 @@
             opacity: 0.7;
         }
 
+        .page {
+            width: 100%;
+            max-width: 900px;
+        }
+
         .container {
             width: 100%;
-            max-width: 720px;
             background: linear-gradient(135deg, rgba(10, 10, 26, 0.95), rgba(7, 6, 18, 0.96));
             border-radius: 26px;
             border: 1px solid var(--border-soft);
@@ -67,6 +71,7 @@
             padding: 26px 26px 22px;
             position: relative;
             overflow: hidden;
+            margin-bottom: 18px;
         }
 
         .container::before {
@@ -134,7 +139,7 @@
         .subtitle {
             font-size: 14px;
             color: var(--text-muted);
-            max-width: 520px;
+            max-width: 620px;
             margin-bottom: 18px;
         }
 
@@ -200,7 +205,7 @@
         .cta-secondary {
             font-size: 12px;
             color: var(--text-muted);
-            max-width: 260px;
+            max-width: 300px;
         }
 
         .grid {
@@ -271,7 +276,101 @@
             border: 1px solid rgba(255, 255, 255, 0.09);
         }
 
+        /* Makale alanı */
+
+        .articles {
+            width: 100%;
+            background: rgba(6, 7, 20, 0.94);
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 20px 22px 18px;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+        }
+
+        .articles-header {
+            margin-bottom: 14px;
+        }
+
+        .articles-kicker {
+            font-size: 11px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .articles-title {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .articles-subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+            max-width: 620px;
+        }
+
+        .article-list {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .article {
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 14px 14px 12px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.015), rgba(0, 0, 0, 0.4));
+        }
+
+        .article-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .article-title {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .article-meta {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .article-body {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .article-body p {
+            margin-bottom: 6px;
+        }
+
+        .article-body ul {
+            list-style: disc;
+            margin-left: 18px;
+            margin-top: 4px;
+            margin-bottom: 8px;
+        }
+
+        .article-note {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
         @media (max-width: 640px) {
+            body {
+                padding: 16px;
+            }
+
             .container {
                 padding: 20px 18px 18px;
                 border-radius: 20px;
@@ -290,103 +389,325 @@
                 width: 100%;
                 justify-content: center;
             }
+            .articles {
+                padding: 16px 14px 14px;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="glow-orb"></div>
-    <main class="container">
-        <div class="inner">
-            <div class="pill-row">
-                <div class="pill">
-                    <span class="pill-dot"></span>
-                    NSFW • Türk Topluluğu
+    <div class="page">
+
+        <!-- ANA LANDING / NSFW YÖNLENDİRME -->
+        <main class="container">
+            <div class="inner">
+                <div class="pill-row">
+                    <div class="pill">
+                        <span class="pill-dot"></span>
+                        NSFW • Türk Topluluğu
+                    </div>
+                    <div class="pill age-pill">
+                        +18 YETİŞKİN
+                    </div>
                 </div>
-                <div class="pill age-pill">
-                    +18 YETİŞKİN
-                </div>
-            </div>
 
-            <h1>
-                <span class="highlight">YaSenBirtanesin</span> • Türk +18 NSFW Telegram
-            </h1>
+                <h1>
+                    <span class="highlight">SITE_ADI</span> • Türk +18 NSFW Telegram
+                </h1>
 
-            <p class="subtitle">
-                Yalnızca yetişkin kullanıcılar için anonim, rahat ve serbest bir NSFW topluluğu.
-                İçerik GitHub’da barındırılmaz, bu sayfa yalnızca 
-                <strong>Telegram kanalına yönlendirme</strong> amaçlıdır.
-            </p>
-
-            <div class="badge-row">
-                <div class="badge"><span>●</span>Anonim katılım</div>
-                <div class="badge"><span>●</span>Ücretsiz erişim</div>
-                <div class="badge"><span>●</span>Türkçe topluluk</div>
-                <div class="badge"><span>●</span>Yalnızca +18 üyeler</div>
-            </div>
-
-            <div class="cta-row">
-                <a class="cta-main" href="https://t.me/zzzzyturk" target="_blank" rel="noreferrer">
-                    <span>Telegram Kanalına Katıl (+18)</span>
-                    <small>NSFW içerik için yönlendirilirsin</small>
-                </a>
-                <p class="cta-secondary">
-                    Butona tıklayarak en az 18 yaşında olduğunu, yetişkin içerik görmeye uygun olduğunun bilincinde olduğunu ve yerel yasaları ihlal etmediğini kabul etmiş olursun.
+                <p class="subtitle">
+                    Yalnızca yetişkin kullanıcılar için anonim, rahat ve serbest bir NSFW topluluğu.
+                    İçerik GitHub’da barındırılmaz; bu sayfa yalnızca 
+                    <strong>Telegram kanalına yönlendirme</strong> ve cinsel sağlık odaklı bilgilendirme sunar.
                 </p>
-            </div>
 
-            <div class="grid">
-                <section class="card">
-                    <h2 class="card-title">Katılmadan önce bilmen gerekenler</h2>
-                    <ul class="list">
-                        <li>
-                            <div class="list-bullet"></div>
-                            <span>Bu topluluk yalnızca <strong>+18 yetişkinler</strong> içindir.</span>
-                        </li>
-                        <li>
-                            <div class="list-bullet"></div>
-                            <span>Telegram ortamı anonimdir; kullanıcı adı ve profil seçimleri sana aittir.</span>
-                        </li>
-                        <li>
-                            <div class="list-bullet"></div>
-                            <span>Paylaşılan içeriklerden tamamen gönderici ve görüntüleyen kişi sorumludur.</span>
-                        </li>
-                        <li>
-                            <div class="list-bullet"></div>
-                            <span>Yerel yasa ve platform kurallarına aykırı paylaşımlar hoş görülmez.</span>
-                        </li>
-                    </ul>
-                </section>
-
-                <section class="card">
-                    <h2 class="card-title">Sorumluluk ve uyarı</h2>
-                    <ul class="list">
-                        <li>
-                            <div class="list-bullet"></div>
-                            <span>Bu web sitesi, yalnızca dış bir Telegram kanalına link veren bir <strong>yönlendirme sayfasıdır</strong>.</span>
-                        </li>
-                        <li>
-                            <div class="list-bullet"></div>
-                            <span>GitHub üzerinde hiçbir yetişkin içerik barındırılmaz ya da saklanmaz.</span>
-                        </li>
-                        <li>
-                            <div class="list-bullet"></div>
-                            <span>Katılımın tamamen isteğe bağlıdır; butona basmak kendi kararındır.</span>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-
-            <footer class="legal">
-                <p class="legal-text">
-                    SITE_ADI, yasal çerçeveye saygılı bir yetişkin topluluk yönlendirme projesidir.
-                    Bu alan adı ve sayfa, içerik barındırmaz; yalnızca Telegram’a giden bir köprü görevi görür.
-                </p>
-                <div class="legal-tag">
-                    +18 • NSFW yönlendirme sayfası • İçerik barındırmaz
+                <div class="badge-row">
+                    <div class="badge"><span>●</span>Anonim katılım</div>
+                    <div class="badge"><span>●</span>Ücretsiz erişim</div>
+                    <div class="badge"><span>●</span>Türkçe topluluk</div>
+                    <div class="badge"><span>●</span>Yalnızca +18 üyeler</div>
                 </div>
-            </footer>
-        </div>
-    </main>
+
+                <div class="cta-row">
+                    <a class="cta-main" href="https://t.me/zzzzyturk" target="_blank" rel="noreferrer">
+                        <span>Telegram Kanalına Katıl (+18)</span>
+                        <small>NSFW içerik için yönlendirilirsin</small>
+                    </a>
+                    <p class="cta-secondary">
+                        Butona tıklayarak en az 18 yaşında olduğunu, yetişkin içerik görmeye uygun olduğunun bilincinde olduğunu
+                        ve yerel yasa ile platform kurallarına uymayı kabul ettiğini onaylamış olursun.
+                    </p>
+                </div>
+
+                <div class="grid">
+                    <section class="card">
+                        <h2 class="card-title">Katılmadan önce bilmen gerekenler</h2>
+                        <ul class="list">
+                            <li>
+                                <div class="list-bullet"></div>
+                                <span>Bu topluluk yalnızca <strong>+18 yetişkinler</strong> içindir; 18 yaş altı kullanıcılar için uygun değildir.</span>
+                            </li>
+                            <li>
+                                <div class="list-bullet"></div>
+                                <span>Telegram ortamı anonimdir; kullanıcı adı, profil fotoğrafı ve kimlik paylaşımı tamamen kendi tercihinedir.</span>
+                            </li>
+                            <li>
+                                <div class="list-bullet"></div>
+                                <span>Paylaşılan içeriklerden içerik sağlayan ve görüntüleyen kişiler sorumludur; bu site yalnızca köprü görevi görür.</span>
+                            </li>
+                            <li>
+                                <div class="list-bullet"></div>
+                                <span>Yerel yasalarla ve Telegram topluluk kurallarıyla çatışan, şiddet içeren veya rızaya aykırı paylaşımlar kabul edilmez.</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="card">
+                        <h2 class="card-title">Sorumluluk ve uyarı</h2>
+                        <ul class="list">
+                            <li>
+                                <div class="list-bullet"></div>
+                                <span>Bu web sitesi, yalnızca dış bir Telegram kanalına link veren bir <strong>yönlendirme sayfasıdır</strong>.</span>
+                            </li>
+                            <li>
+                                <div class="list-bullet"></div>
+                                <span>GitHub üzerinde hiçbir yetişkin içerik barındırılmaz; yalnızca bilgilendirici yazılar ve bağlantılar bulunur.</span>
+                            </li>
+                            <li>
+                                <div class="list-bullet"></div>
+                                <span>Katılımın tamamen isteğe bağlıdır; butona basmak kendi kararın ve sorumluluğundadır.</span>
+                            </li>
+                            <li>
+                                <div class="list-bullet"></div>
+                                <span>Bu sitedeki cinsel sağlık içerikleri genel bilgilendirme amaçlıdır ve tıbbi tanı veya tedavi yerine geçmez.</span>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+
+                <footer class="legal">
+                    <p class="legal-text">
+                        SITE_ADI, yasal çerçeveye saygılı bir yetişkin topluluk yönlendirme projesidir.
+                        Bu alan adı ve sayfa, NSFW içerik barındırmaz; yalnızca Telegram’a giden bir köprü ve 
+                        cinsel sağlık & biyoloji konusunda genel bilgi kaynağı görevi görür.
+                    </p>
+                    <div class="legal-tag">
+                        +18 • NSFW yönlendirme sayfası • Cinsel sağlık bilgilendirme
+                    </div>
+                </footer>
+            </div>
+        </main>
+
+        <!-- CİNSEL SAĞLIK & BİYOLOJİ MAKALELERİ -->
+        <section class="articles" id="cinsel-saglik">
+            <header class="articles-header">
+                <div class="articles-kicker">Cinsel sağlık & biyoloji</div>
+                <h2 class="articles-title">Vücudunu tanı, sınırını bil, sağlığını koru.</h2>
+                <p class="articles-subtitle">
+                    Aşağıdaki yazılar, cinsel sağlık ve biyoloji hakkında temel bilgiler sunar. 
+                    Amaç; merakı bilimle birleştirmek, riskleri azaltmak ve sağlıklı karar verebilmeni kolaylaştırmaktır.
+                </p>
+            </header>
+
+            <div class="article-list">
+
+                <!-- MAKALE 1 -->
+                <article class="article">
+                    <div class="article-label">Makale 1</div>
+                    <h3 class="article-title">Cinsel Sağlık 101: Vücudunu Tanımanın Gücü</h3>
+                    <div class="article-meta">Genel bilgilendirme • Tüm cinsiyet kimlikleri için geçerli temel kavramlar</div>
+                    <div class="article-body">
+                        <p>
+                            Cinsel sağlık, sadece fiziksel ilişkiden ibaret değildir; bedenini tanıman, sınırlarını bilmen,
+                            rızanın ne olduğunu anlaman ve kendini güvende hissetmenle ilgilidir. Sağlıklı bir cinsellik; 
+                            <strong>saygı, rıza, iletişim ve bilgi</strong> üzerine kuruludur.
+                        </p>
+                        <p>
+                            Vücudunu tanımak; nelerin sana iyi geldiğini, nelerin seni rahatsız ettiğini, nerede “evet”
+                            nerede ise net bir “hayır” demek istediğini fark etmeni sağlar. Bu sadece fiziksel için değil, 
+                            duygusal olarak da önemlidir. Bazen sınırı, bedeninden önce kalbin çizer.
+                        </p>
+                        <p>
+                            Cinsel kimlik, yönelim ve ifade; her insan için kişisel ve kendine özgüdür. 
+                            Toplum baskısı, klişeler ya da kalıp yargılar, sağlıklı cinsel kimliğin önüne geçmemelidir. 
+                            Kim olduğuna dair keşif sürecin; aceleye getirilmeyecek, başkaları tarafından tanımlanmayacak kadar 
+                            özeldir.
+                        </p>
+                        <p>
+                            Sağlıklı cinsellik şunları içerir:
+                        </p>
+                        <ul>
+                            <li>Bedenine ve karşındakinin bedenine saygı göstermek,</li>
+                            <li>Rızanın her zaman özgürce, baskısız ve açıkça verilmesi gerektiğini bilmek,</li>
+                            <li>Riskleri (enfeksiyon, istenmeyen gebelik vb.) öğrenip buna göre önlem almak,</li>
+                            <li>Gerek duyduğunda bir sağlık profesyonelinden destek istemekten çekinmemek.</li>
+                        </ul>
+                        <p>
+                            Unutma: Cinsel sağlık, genel sağlığının bir parçasıdır; tıpkı kalp, sindirim veya sinir sistemi 
+                            gibi, özen ve bilgi gerektirir.
+                        </p>
+                    </div>
+                    <div class="article-note">
+                        Bu metin, tıbbi bir tanı koymaz; yalnızca temel bakış açısı kazandırmayı hedefler.
+                    </div>
+                </article>
+
+                <!-- MAKALE 2 -->
+                <article class="article">
+                    <div class="article-label">Makale 2</div>
+                    <h3 class="article-title">Güvenli Seks ve Korunma Yöntemleri: Riskleri Azaltmak</h3>
+                    <div class="article-meta">Korunma, bariyer yöntemleri ve dikkat edilmesi gereken noktalar</div>
+                    <div class="article-body">
+                        <p>
+                            Cinsel yolla bulaşan enfeksiyonlar (CYBE) ve istenmeyen gebelikler, cinsel hayatla ilgili en 
+                            bilinen risklerdir. Bu riskleri tamamen yok etmek her zaman mümkün olmasa da 
+                            <strong>doğru korunma yöntemleriyle ciddi oranda azaltmak</strong> mümkündür.
+                        </p>
+                        <p>
+                            En çok bilinen korunma yöntemlerinden bazıları:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Bariyer yöntemleri:</strong> Prezervatif gibi yöntemler, hem gebelik riskini azaltmaya
+                                hem de birçok enfeksiyona karşı koruma sağlamaya yardımcı olur. Doğru kullanıldığında, 
+                                korunma oranı önemli ölçüde artar.
+                            </li>
+                            <li>
+                                <strong>Hormon bazlı yöntemler:</strong> Bazı doğum kontrol hapları, iğneler, implantlar 
+                                istenmeyen gebelik riskini düşürebilir; ancak cinsel yolla bulaşan enfeksiyonlara karşı 
+                                bariyer yöntemler kadar koruma sağlamaz.
+                            </li>
+                            <li>
+                                <strong>Diğer yöntemler:</strong> Rahim içi araç (RİA) gibi bazı yöntemler de gebelik riskini 
+                                azaltmak için kullanılır; detaylı bilgi için bir kadın doğum uzmanıyla görüşmek gerekir.
+                            </li>
+                        </ul>
+                        <p>
+                            Korunma konusunda dikkat edilmesi gereken bazı temel noktalar:
+                        </p>
+                        <ul>
+                            <li>Kondom kullanıyorsan son kullanma tarihini ve paket bütünlüğünü kontrol etmek,</li>
+                            <li>Her ilişkide yeni kondom kullanmak ve doğru takma/çıkarma adımlarına dikkat etmek,</li>
+                            <li>Şüpheli bir temas sonrası bir sağlık kuruluşunda test yaptırmayı değerlendirmek,</li>
+                            <li>Partnerinle cinsel geçmiş, test durumu ve korunma konularında samimi, saygılı iletişim kurmak.</li>
+                        </ul>
+                        <p>
+                            Güvenli seks; sadece fiziksel korunma değil, psikolojik olarak da güvende hissetmeyi içerir.
+                            Rıza yoksa, bilgi yoksa, şeffaflık yoksa; “güvenli” kelimesi eksik kalır.
+                        </p>
+                    </div>
+                    <div class="article-note">
+                        Korunma yöntemleri kişiden kişiye değişebilir; sana en uygun yöntemi belirlemek için sağlık profesyoneliyle görüşmek önemlidir.
+                    </div>
+                </article>
+
+                <!-- MAKALE 3 -->
+                <article class="article">
+                    <div class="article-label">Makale 3</div>
+                    <h3 class="article-title">Cinsel Yolla Bulaşan Enfeksiyonlar: Bilmek, Korkmaktan Daha Güçlüdür</h3>
+                    <div class="article-meta">Temel kavramlar, testlerin önemi ve utanmadan yardım istemek</div>
+                    <div class="article-body">
+                        <p>
+                            Cinsel yolla bulaşan enfeksiyonlar (CYBE), dünyanın her yerinde yaygın görülen sağlık sorunları arasındadır. 
+                            Bazıları belirti verirken, bazıları uzun süre sessiz seyredebilir. Bu nedenle, yalnızca 
+                            “belirti yok, demek ki sorun yok” diye düşünmek doğru değildir.
+                        </p>
+                        <p>
+                            Temel olarak, cinsel yolla bulaşabilen enfeksiyonlar; bakteriyel, viral veya parazitik olabilir.
+                            Bazı türler ilaçla tedavi edilebilirken, bazıları için tamamen yok etmek mümkün olmayabilir fakat
+                            kontrol altına alınabilir. Erken tanı bu noktada kritik öneme sahiptir.
+                        </p>
+                        <p>
+                            Neden düzenli test düşünülmeli?
+                        </p>
+                        <ul>
+                            <li>Yeni bir partnerin varsa veya partner sayın arttıysa,</li>
+                            <li>Korunmasız ilişki yaşadıysan,</li>
+                            <li>Partnerlerinden birinde enfeksiyon tespit edildiyse,</li>
+                            <li>Yanma, akıntı, kaşıntı, ağrı gibi şikâyetlerin varsa,</li>
+                        </ul>
+                        <p>
+                            Utanmak, ertelemek, görmezden gelmek; sağlık açısından işleri zorlaştırabilir. 
+                            Bir sağlık kuruluşunda test yaptırmak; gelecekteki cinsel hayatını daha güvenli ve 
+                            kontrol edilebilir kılar. Bu süreç gizlilik esasına dayanır; sağlık çalışanları bilgilerini 
+                            korumakla yükümlüdür.
+                        </p>
+                        <p>
+                            İnternetten okunan bilgiler bir fikir verebilir ama kesin tanı koyamaz. 
+                            Eğer şüphelerin varsa, en doğru adım; bir doktora veya cinsel sağlık kliniğine 
+                            başvurmaktır.
+                        </p>
+                    </div>
+                    <div class="article-note">
+                        Kendi kendine teşhis koymak yerine profesyonel destek almak, hem senin hem de partnerlerinin sağlığı için daha güvenlidir.
+                    </div>
+                </article>
+
+                <!-- MAKALE 4 -->
+                <article class="article">
+                    <div class="article-label">Makale 4</div>
+                    <h3 class="article-title">Biyoloji Perspektifinden Cinsellik: Üreme Sistemi ve Hormonlar</h3>
+                    <div class="article-meta">Temel biyoloji, hormon dengesi ve duygularla bağlantı</div>
+                    <div class="article-body">
+                        <p>
+                            Cinsellik, biyolojinin de derin şekilde dokunduğu bir alandır. 
+                            Üreme sistemi, hormonlar, sinir sistemi ve beyin; cinsel istek, yakınlık ihtiyacı 
+                            ve duygusal bağlanma üzerinde birlikte rol oynar.
+                        </p>
+                        <p>
+                            İnsan vücudunda ergenlikle birlikte hormon düzeyleri değişmeye başlar. 
+                            Östrojen, testosteron ve diğer hormonlar; fiziksel değişimlerin yanı sıra duygularda, 
+                            enerjide ve cinsel istekte dalgalanmalara neden olabilir. Bu, “bozukluk” değil; 
+                            gelişimin doğal bir parçasıdır.
+                        </p>
+                        <p>
+                            Üreme sistemi; yumurtalıklar, testisler, rahim gibi organları; 
+                            aynı zamanda bunları kontrol eden hormon salgılayan bezleri içerir. 
+                            Biyolojiyi anlamak, vücudunun nasıl çalıştığına dair daha bilinçli olmanı sağlar.
+                        </p>
+                        <p>
+                            Biyolojik gerçek şu: Her beden farklıdır. Bazı insanlar daha yoğun cinsel istek yaşarken, 
+                            bazıları daha düşük düzeyde hissedebilir veya hiç hissetmeyebilir. 
+                            Bu çeşitlilik doğaldır ve tek tip bir “normal” yoktur.
+                        </p>
+                        <p>
+                            Stres, uyku, beslenme, kullanılan ilaçlar, psikolojik durum ve ilişkilerin seyri; 
+                            hormon dengeni ve dolayısıyla cinsel isteğini etkileyebilir. Bu nedenle, cinselliği 
+                            yalnızca biyolojik bir refleks olarak değil, <strong>beden-zihin-duygu üçgeninin ortak ürünü</strong> 
+                            olarak görmek daha sağlıklı bir yaklaşımdır.
+                        </p>
+                    </div>
+                    <div class="article-note">
+                        Uzun süren düzensizlikler, yoğun ağrılar veya seni rahatsız eden değişiklikler fark edersen bir doktora başvurmak en doğru adımdır.
+                    </div>
+                </article>
+
+                <!-- GENEL UYARI BLOĞU -->
+                <article class="article">
+                    <div class="article-label">Önemli not</div>
+                    <h3 class="article-title">Bu yazılar neyi amaçlıyor, neyi amaçlamıyor?</h3>
+                    <div class="article-body">
+                        <p>
+                            Buradaki içerikler, cinselliği tıbbi ve biyolojik açıdan daha bilinçli ele almanı sağlamak için yazılmıştır.
+                            Amaç; seni korkutmak ya da yönlendirmek değil, bilgiyle güçlendirmektir.
+                        </p>
+                        <p>
+                            Herhangi bir spesifik şikâyetin, ağrın, akıntın, kaşıntın, ruh halinde ani değişimlerin veya 
+                            cinsel hayatınla ilgili seni zorlayan bir durum varsa; buradaki metinlere güvenmek yerine 
+                            <strong>bir sağlık profesyoneline danışman</strong> daha sağlıklıdır.
+                        </p>
+                        <p>
+                            İnternette okuduğun hiçbir bilgi, yüz yüze yapılan muayene ve profesyonel değerlendirmelerin yerini tutmaz.
+                            Sağlığın, erteleyeceğin bir konu değil; üzerine titreyeceğin bir konudur.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </div>
 </body>
 </html>
