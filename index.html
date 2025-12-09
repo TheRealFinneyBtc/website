@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <title>SITE_ADI | Türk +18 NSFW Telegram Topluluğu</title>
+    <meta name="description" content="Türk +18 NSFW topluluğu. Yetişkinlere özel içerik ve anonim ortam için Telegram kanalımıza katılın. Güvenli, ücretsiz ve sadece yetişkinlere yönelik." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Basit SEO -->
+    <meta name="keywords" content="Türk NSFW, +18 Telegram, yetişkin topluluk, NSFW kanal, Türk +18 grup" />
+
+    <!-- Open Graph (Google / WhatsApp / Telegram önizleme) -->
+    <meta property="og:title" content="SITE_ADI | Türk +18 NSFW Telegram Topluluğu" />
+    <meta property="og:description" content="+18 yetişkinlere özel Türk NSFW topluluğu. Anonim ve ücretsiz katılım." />
+    <meta property="og:type" content="website" />
+
+    <style>
+        :root {
+            --bg1: #050816;
+            --bg2: #12051f;
+            --accent: #ff2e63;
+            --accent-soft: rgba(255, 46, 99, 0.16);
+            --text-main: #f8f9ff;
+            --text-muted: #b0b4c3;
+            --card-bg: rgba(8, 10, 26, 0.8);
+            --border-soft: rgba(255, 255, 255, 0.08);
+            --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #3a0ca3 0, var(--bg1) 32%, var(--bg2) 75%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .glow-orb {
+            position: fixed;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 46, 99, 0.25), transparent 70%);
+            top: -120px;
+            right: -60px;
+            pointer-events: none;
+            filter: blur(6px);
+            opacity: 0.7;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 720px;
+            background: linear-gradient(135deg, rgba(10, 10, 26, 0.95), rgba(7, 6, 18, 0.96));
+            border-radius: 26px;
+            border: 1px solid var(--border-soft);
+            box-shadow: var(--shadow-soft);
+            padding: 26px 26px 22px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top left, rgba(255, 46, 99, 0.18), transparent 60%);
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .pill-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .pill {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 7px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 70%);
+            color: var(--text-muted);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pill-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 12px rgba(255, 46, 99, 0.85);
+        }
+
+        .age-pill {
+            border-color: rgba(255, 46, 99, 0.65);
+            background: linear-gradient(135deg, rgba(255, 46, 99, 0.18), rgba(0, 0, 0, 0.16));
+            color: #ffdfe9;
+        }
+
+        h1 {
+            font-size: 32px;
+            line-height: 1.15;
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ff2e63, #ff9f43);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin-bottom: 18px;
+        }
+
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+
+        .badge {
+            font-size: 11px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+        }
+
+        .badge span {
+            font-size: 14px;
+            margin-right: 4px;
+            color: var(--accent);
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            align-items: center;
+            margin-bottom: 22px;
+        }
+
+        .cta-main {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 22px;
+            border-radius: 999px;
+            border: none;
+            text-decoration: none;
+            background: radial-gradient(circle at top left, #ff2e63, #c9184a);
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.8);
+            transform: translateY(0);
+            transition: transform 0.13s ease-out, box-shadow 0.13s ease-out, filter 0.13s ease-out;
+        }
+
+        .cta-main:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.95);
+            filter: brightness(1.04);
+        }
+
+        .cta-main small {
+            font-size: 11px;
+            opacity: 0.88;
+        }
+
+        .cta-secondary {
+            font-size: 12px;
+            color: var(--text-muted);
+            max-width: 260px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            gap: 20px;
+            margin-bottom: 14px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.35));
+            border-radius: 18px;
+            border: 1px solid var(--border-soft);
+            padding: 14px 14px 12px;
+        }
+
+        .card-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .list {
+            list-style: none;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .list li {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .list-bullet {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-soft);
+            margin-top: 6px;
+        }
+
+        .legal {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            margin-top: 10px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .legal-text {
+            font-size: 11px;
+            color: var(--text-muted);
+            max-width: 420px;
+        }
+
+        .legal-tag {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.65);
+            padding: 5px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 20px 18px 18px;
+                border-radius: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .cta-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .cta-main {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glow-orb"></div>
+    <main class="container">
+        <div class="inner">
+            <div class="pill-row">
+                <div class="pill">
+                    <span class="pill-dot"></span>
+                    NSFW • Türk Topluluğu
+                </div>
+                <div class="pill age-pill">
+                    +18 YETİŞKİN
+                </div>
+            </div>
+
+            <h1>
+                <span class="highlight">YaSenBirtanesin</span> • Türk +18 NSFW Telegram
+            </h1>
+
+            <p class="subtitle">
+                Yalnızca yetişkin kullanıcılar için anonim, rahat ve serbest bir NSFW topluluğu.
+                İçerik GitHub’da barındırılmaz, bu sayfa yalnızca 
+                <strong>Telegram kanalına yönlendirme</strong> amaçlıdır.
+            </p>
+
+            <div class="badge-row">
+                <div class="badge"><span>●</span>Anonim katılım</div>
+                <div class="badge"><span>●</span>Ücretsiz erişim</div>
+                <div class="badge"><span>●</span>Türkçe topluluk</div>
+                <div class="badge"><span>●</span>Yalnızca +18 üyeler</div>
+            </div>
+
+            <div class="cta-row">
+                <a class="cta-main" href="https://t.me/zzzzyturk" target="_blank" rel="noreferrer">
+                    <span>Telegram Kanalına Katıl (+18)</span>
+                    <small>NSFW içerik için yönlendirilirsin</small>
+                </a>
+                <p class="cta-secondary">
+                    Butona tıklayarak en az 18 yaşında olduğunu, yetişkin içerik görmeye uygun olduğunun bilincinde olduğunu ve yerel yasaları ihlal etmediğini kabul etmiş olursun.
+                </p>
+            </div>
+
+            <div class="grid">
+                <section class="card">
+                    <h2 class="card-title">Katılmadan önce bilmen gerekenler</h2>
+                    <ul class="list">
+                        <li>
+                            <div class="list-bullet"></div>
+                            <span>Bu topluluk yalnızca <strong>+18 yetişkinler</strong> içindir.</span>
+                        </li>
+                        <li>
+                            <div class="list-bullet"></div>
+                            <span>Telegram ortamı anonimdir; kullanıcı adı ve profil seçimleri sana aittir.</span>
+                        </li>
+                        <li>
+                            <div class="list-bullet"></div>
+                            <span>Paylaşılan içeriklerden tamamen gönderici ve görüntüleyen kişi sorumludur.</span>
+                        </li>
+                        <li>
+                            <div class="list-bullet"></div>
+                            <span>Yerel yasa ve platform kurallarına aykırı paylaşımlar hoş görülmez.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <h2 class="card-title">Sorumluluk ve uyarı</h2>
+                    <ul class="list">
+                        <li>
+                            <div class="list-bullet"></div>
+                            <span>Bu web sitesi, yalnızca dış bir Telegram kanalına link veren bir <strong>yönlendirme sayfasıdır</strong>.</span>
+                        </li>
+                        <li>
+                            <div class="list-bullet"></div>
+                            <span>GitHub üzerinde hiçbir yetişkin içerik barındırılmaz ya da saklanmaz.</span>
+                        </li>
+                        <li>
+                            <div class="list-bullet"></div>
+                            <span>Katılımın tamamen isteğe bağlıdır; butona basmak kendi kararındır.</span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <footer class="legal">
+                <p class="legal-text">
+                    SITE_ADI, yasal çerçeveye saygılı bir yetişkin topluluk yönlendirme projesidir.
+                    Bu alan adı ve sayfa, içerik barındırmaz; yalnızca Telegram’a giden bir köprü görevi görür.
+                </p>
+                <div class="legal-tag">
+                    +18 • NSFW yönlendirme sayfası • İçerik barındırmaz
+                </div>
+            </footer>
+        </div>
+    </main>
+</body>
+</html>
